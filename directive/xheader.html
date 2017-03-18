@@ -1,0 +1,12 @@
+<header >
+	<div class='head'>
+		<div class='header'>
+			<ul class='partone'>
+				<li ng-repeat='nav in navs'><a  ng-class='{"active":tabs==$index}' ng-click='tab($index)' ng-href="{{nav.url}}" >{{nav.title}}</a></li>
+			</ul>
+			<ul class='parttwo'>
+				<li ng-repeat='na in nas'><a  href="">{{na.title}}</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
