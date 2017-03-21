@@ -88,19 +88,7 @@ controller.controller('homeCtrl',['$scope',function($scope){
 		]
 
 	}]
-	$scope.images = [{
-		src:'images/4.jpg'
-	},{
-		src:'images/1.jpg'
-	},{
-		src:'images/2.jpg'
-	},{
-		src:'images/3.jpg'
-	},{
-		src:'images/5.jpg'
-	},{
-		src:'images/1.jpg'
-	}]
+	
 
 }])
 var directive = angular.module('direc',[]);
@@ -114,6 +102,10 @@ directive.directive('xheader',function(){
 	}
 }).directive('xcarouse',function(){
 	return{
-		templateUrl:'directive/xcarouse.html'
+		templateUrl:'directive/xcarouse.html',
+		link:function(){
+			var swiper = new Swiper('.swiper-container', {
+		    autoplay: 2500})
+		}
 	}
 })
